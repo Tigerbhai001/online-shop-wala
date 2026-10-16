@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Online Shop Wala offers affordable business websites, website design, and social media management. Websites starting at ₹5,000.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Online Shop Wala | Websites & Digital Growth</title>
+  <style>
+    :root{--bg:#0b1020;--panel:#111a30;--panel2:#151f39;--text:#f7f8ff;--muted:#b8c1d9;--purple:#8b5cf6;--cyan:#22d3ee;--line:rgba(255,255,255,.12);--radius:22px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 80% 0%,rgba(139,92,246,.17),transparent 32%),var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    .container{width:min(1120px,calc(100% - 36px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.4px}
+    .brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--purple),var(--cyan));color:#07101d;font-weight:1000}
+    .brand span:last-child{font-size:1.02rem}
+    nav{display:flex;align-items:center;gap:22px}
+    nav a{font-size:.9rem;color:var(--muted);font-weight:650}
+    nav a:hover{color:white}
+    .menu-btn{display:none;border:1px solid var(--line);background:var(--panel);color:white;border-radius:10px;padding:8px 12px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:13px 19px;border-radius:13px;background:linear-gradient(120deg,var(--purple),#6d5dfc);color:white;font-weight:800;border:0;cursor:pointer;box-shadow:0 10px 30px rgba(139,92,246,.2);transition:transform .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.secondary{background:transparent;border:1px solid var(--line);box-shadow:none}
+    .hero{padding:88px 0 72px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:48px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:#d9d2ff;background:rgba(139,92,246,.13);border:1px solid rgba(139,92,246,.35);border-radius:999px;padding:7px 12px;font-size:.82rem;font-weight:800}
+    h1{font-size:clamp(2.65rem,6vw,5rem);line-height:1.04;letter-spacing:-.055em;margin:20px 0}
+    .gradient-text{background:linear-gradient(100deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:1.1rem;max-width:610px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}
+    .fine{font-size:.82rem;color:var(--muted)}
+    .showcase{position:relative;padding:24px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.02));box-shadow:0 30px 90px rgba(0,0,0,.25)}
+    .browser{border-radius:18px;background:#f7f8ff;color:#13182b;overflow:hidden;box-shadow:0 16px 45px rgba(0,0,0,.3);transform:rotate(1deg)}
+    .browser-top{height:38px;background:#e9ebf5;display:flex;align-items:center;gap:6px;padding:0 14px}
+    .dot{height:8px;width:8px;border-radius:50%;background:#a3a8bc}
+    .mock-content{padding:24px}
+    .mock-logo{font-weight:900;font-size:.8rem;color:#4f46e5}
+    .mock-content h3{font-size:1.55rem;line-height:1.15;margin:16px 0 8px}
+    .mock-content p{font-size:.8rem;color:#68708a}
+    .mock-button{display:inline-block;padding:8px 12px;background:#6d5dfc;color:white;border-radius:8px;font-size:.72rem;font-weight:800}
+    .mock-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
+    .mock-card{height:78px;border-radius:10px;background:linear-gradient(135deg,#ddd6fe,#cffafe)}
+    .float-tag{position:absolute;right:-14px;bottom:28px;background:#17223b;border:1px solid var(--line);padding:13px 16px;border-radius:15px;box-shadow:0 12px 30px #0005;font-size:.85rem;font-weight:800}
+    section{padding:76px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 38px}
+    .section-head .eyebrow{margin-bottom:10px}
+    h2{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.04em;line-height:1.12;margin:8px 0 14px}
+    .section-head p,.muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.018))}
+    .icon-box{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:rgba(139,92,246,.16);font-size:1.35rem;margin-bottom:18px}
+    .card h3{margin:0 0 8px;font-size:1.18rem}
+    .card p{margin:0;color:var(--muted);font-size:.95rem}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center}
+    .about-panel{padding:30px;border-radius:26px;background:linear-gradient(145deg,rgba(139,92,246,.2),rgba(34,211,238,.07));border:1px solid var(--line)}
+    .check-list{padding:0;list-style:none;display:grid;gap:12px}
+    .check-list li{display:flex;gap:10px;color:var(--muted)}
+    .check-list li:before{content:"✓";color:var(--cyan);font-weight:900}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+    .price-card{display:flex;flex-direction:column;position:relative}
+    .price-card.featured{border-color:rgba(139,92,246,.75);box-shadow:0 15px 45px rgba(139,92,246,.1)}
+    .price-label{color:#c4b5fd;font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+    .price{font-size:2.4rem;font-weight:950;letter-spacing:-.05em;margin:8px 0 0}
+    .price small{font-size:.9rem;font-weight:600;letter-spacing:0;color:var(--muted)}
+    .price-card ul{padding-left:18px;color:var(--muted);font-size:.92rem;flex:1}
+    .price-card li{margin:8px 0}
+    .price-card .btn{margin-top:16px}
+    .notice{margin-top:22px;padding:17px 19px;border:1px solid rgba(34,211,238,.24);background:rgba(34,211,238,.06);border-radius:14px;color:var(--muted);font-size:.9rem}
+    .categories{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+    .chip{border:1px solid var(--line);background:rgba(255,255,255,.035);padding:9px 13px;border-radius:999px;color:#dce3f6;font-size:.88rem}
+    .quote-mark{font-size:2rem;color:#c4b5fd}
+    .testimonial-note{font-size:.84rem;color:var(--muted);margin-top:18px;text-align:center}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px}
+    .contact-items{display:grid;gap:12px;margin-top:22px}
+    .contact-item{padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03)}
+    .contact-item strong{display:block;font-size:.82rem;color:var(--muted);margin-bottom:4px}
+    .contact-item a{overflow-wrap:anywhere}
+    form{display:grid;gap:13px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    label{display:block;font-size:.85rem;font-weight:700;margin-bottom:6px;color:#e6eaff}
+    input,select,textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:#0c1428;color:white;padding:12px 13px;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--purple)}
+    textarea{resize:vertical;min-height:110px}
+    select option{background:#111a30}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.88rem}
+    .footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+    .whatsapp{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#062b16;font-size:1.55rem;font-weight:900;box-shadow:0 10px 30px #0007}
+    .small-link{color:#c4b5fd;text-decoration:underline;text-underline-offset:3px}
+    @media(max-width:850px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:60px}.showcase{max-width:560px;margin:0 auto}.grid{grid-template-columns:repeat(2,1fr)}.pricing-grid{grid-template-columns:repeat(2,1fr)}nav{gap:13px}nav a{font-size:.82rem}}
+    @media(max-width:620px){.container{width:min(100% - 28px,1120px)}.nav{min-height:68px;flex-wrap:wrap}.menu-btn{display:block}nav{display:none;order:3;width:100%;padding:0 0 15px;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:10px 4px;font-size:.95rem}.nav-cta{display:none}.hero{padding:48px 0 45px}.hero-grid{gap:34px}h1{font-size:2.75rem}.lead{font-size:1rem}.showcase{padding:14px}.float-tag{right:0;bottom:10px;font-size:.75rem}.mock-content{padding:17px}.mock-content h3{font-size:1.25rem}section{padding:58px 0}.grid,.pricing-grid{grid-template-columns:1fr}.card{padding:21px}.form-row{grid-template-columns:1fr}.about-panel{padding:23px}.footer-row{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Online Shop Wala home">
+        <span class="brand-mark">OW</span><span>ONLINE SHOP WALA</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services & Pricing</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact Us</a>
+      </nav>
+      <a class="btn nav-cta" href="#contact">Start a Project ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">✦ DIGITAL SOLUTIONS FOR GROWING BUSINESSES</span>
+          <h1>Your Business.<br><span class="gradient-text">Your Website.</span><br>Your Growth.</h1>
+          <p class="lead">Affordable websites and creative social media management to help your business build a stronger online presence.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#services">Explore Services →</a>
+            <a class="btn secondary" href="#contact">Get a Free Consultation</a>
+          </div>
+          <p class="fine">Business websites starting at <strong>₹5,000 one-time</strong>. Clear packages. No unnecessary complexity.</p>
+        </div>
+        <div class="showcase" aria-label="Website design preview">
+          <div class="browser">
+            <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="mock-content">
+              <div class="mock-logo">YOUR BRAND ONLINE</div>
+              <h3>A better way to<br>showcase your business.</h3>
+              <p>Present your services, products and story in one professional place.</p>
+              <span class="mock-button">LET'S GET STARTED ↗</span>
+              <div class="mock-cards"><div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div></div>
+            </div>
+          </div>
+          <div class="float-tag">✦ Websites from ₹5,000</div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="servicesIntro">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">WHAT WE DO</span>
+          <h2 id="servicesIntro">Everything you need to <span class="gradient-text">get online</span></h2>
+          <p>Practical digital services for new businesses, local shops and growing brands.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="icon-box">💻</div><h3>Website Development</h3><p>Showcase your business, services and contact details in a clean, professional website.</p></article>
+          <article class="card"><div class="icon-box">🎨</div><h3>Website Designing</h3><p>Modern layouts and brand-focused visuals designed to look great on mobile and desktop.</p></article>
+          <article class="card"><div class="icon-box">📸</div><h3>Instagram Management</h3><p>Creative posts or reels, captions and content planning to keep your profile active.</p></article>
+          <article class="card"><div class="icon-box">📘</div><h3>Facebook Management</h3><p>Consistent business page content that helps communicate your products and services.</p></article>
+          <article class="card"><div class="icon-box">💼</div><h3>LinkedIn Management</h3><p>Professional posts and brand communication for businesses and service providers.</p></article>
+          <article class="card"><div class="icon-box">📈</div><h3>Ads & Boosting</h3><p>Campaign setup and management to help promote selected content to a relevant audience.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-panel">
+          <span class="eyebrow">ABOUT ONLINE SHOP WALA</span>
+          <h2>Big digital ideas, made <span class="gradient-text">more accessible.</span></h2>
+          <p class="muted">We help businesses build a professional digital presence with affordable website creation and social media services.</p>
+          <p class="muted">Using modern design tools and AI-assisted workflows, we aim to make the process simpler, clearer and more accessible for businesses of different sizes.</p>
+        </div>
+        <div>
+          <h2>A digital partner focused on your business.</h2>
+          <p class="muted">Whether you're launching a new venture or improving your existing online presence, we'll discuss your goals and the right scope before work begins.</p>
+          <ul class="check-list">
+            <li>Affordable starting packages with agreed deliverables</li>
+            <li>AI-assisted workflows and business-focused design</li>
+            <li>Mobile-friendly layouts where supported by the platform</li>
+            <li>Clear communication about extra costs and changes</li>
+            <li>Services for a wide range of business categories</li>
+          </ul>
+          <a class="btn" href="#contact">Tell Us About Your Business →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">SIMPLE, TRANSPARENT STARTING PRICES</span>
+          <h2>Choose the right <span class="gradient-text">package</span></h2>
+          <p>Final pricing depends on the agreed scope, content and features. Ask us for a quote before work begins.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="card price-card featured">
+            <span class="price-label">One-time package</span><h3>Basic Business Website</h3>
+            <div class="price">₹5,000 <small>starting at</small></div>
+            <p class="muted">A simple online home for your business.</p>
+            <ul><li>Business introduction and services</li><li>Product or service showcase</li><li>Contact details and enquiry options</li><li>Agreed basic pages and design</li><li>Mobile-friendly layout where supported</li></ul>
+            <a class="btn" href="#contact" data-service="Basic Business Website">Enquire About Website</a>
+          </article>
+          <article class="card price-card">
+            <span class="price-label">Per 30 days</span><h3>Instagram Management</h3>
+            <div class="price">₹5,000 <small>/ month</small></div>
+            <p class="muted">A consistent, brand-focused Instagram presence.</p>
+            <ul><li>15 total posts or reels</li><li>Creative content design</li><li>Captions and relevant hashtags</li><li>Content planning and scheduling</li><li>Basic performance review</li></ul>
+            <a class="btn secondary" href="#contact" data-service="Instagram Management">Choose Instagram</a>
+          </article>
+          <article class="card price-card">
+            <span class="price-label">Per 30 days</span><h3>Facebook Management</h3>
+            <div class="price">₹5,000 <small>/ month</small></div>
+            <p class="muted">Keep your business page active and professional.</p>
+            <ul><li>15 total posts or reels</li><li>Graphics and captions</li><li>Content planning and scheduling</li><li>Business page content management</li><li>Basic performance review</li></ul>
+            <a class="btn secondary" href="#contact" data-service="Facebook Management">Choose Facebook</a>
+          </article>
+          <article class="card price-card">
+            <span class="price-label">Per 30 days</span><h3>LinkedIn Management</h3>
+            <div class="price">₹5,000 <small>/ month</small></div>
+            <p class="muted">Professional content for your business brand.</p>
+            <ul><li>15 professional posts</li><li>Business-focused graphics and captions</li><li>Content calendar and scheduling</li><li>Company page content management</li><li>Basic performance review</li></ul>
+            <a class="btn secondary" href="#contact" data-service="LinkedIn Management">Choose LinkedIn</a>
+          </article>
+          <article class="card price-card">
+            <span class="price-label">Campaign service fee</span><h3>Social Media Boosting</h3>
+            <div class="price">₹5,000 <small>starting at</small></div>
+            <p class="muted">Campaign setup and management for selected content.</p>
+            <ul><li>Campaign planning and setup</li><li>Audience and location targeting</li><li>Ad creative preparation</li><li>Basic monitoring and report</li><li>Advertising spend is separate</li></ul>
+            <a class="btn secondary" href="#contact" data-service="Social Media Boosting">Plan a Campaign</a>
+          </article>
+          <article class="card price-card">
+            <span class="price-label">Custom requirements</span><h3>Need Something Different?</h3>
+            <div class="price">Let's talk</div>
+            <p class="muted">For extra pages, special features or a tailored content plan.</p>
+            <ul><li>Discuss your goals</li><li>Review requested features</li><li>Agree on scope and timeline</li><li>Receive a clear quotation</li></ul>
+            <a class="btn secondary" href="#contact" data-service="Custom Project">Discuss Your Project</a>
+          </article>
+        </div>
+        <div class="notice"><strong>Pricing notes:</strong> ₹5,000 is the starting service fee for the agreed basic website scope. A custom domain and paid hosting are not included; a free platform URL/subdomain may be used where available. Premium tools, third-party services, advanced e-commerce features and additional changes may cost extra. Social media packages include 15 total content pieces per 30-day period on the selected platform. For boosting, the advertising budget paid to the platform is separate unless agreed in writing. Sales, leads and reach are not guaranteed.</div>
+      </div>
+    </section>
+
+    <section id="categories">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">MADE FOR MANY INDUSTRIES</span>
+          <h2>One digital partner. <span class="gradient-text">Many possibilities.</span></h2>
+          <p>We can discuss a website or content plan for your business category.</p>
+        </div>
+        <div class="categories">
+          <span class="chip">Event Management</span><span class="chip">Hospitality</span><span class="chip">Hotels & Guest Houses</span><span class="chip">Home Decor</span><span class="chip">Candles & Gifting</span><span class="chip">Retail Stores</span><span class="chip">Fashion & Clothing</span><span class="chip">Restaurants & Cafes</span><span class="chip">Beauty & Salons</span><span class="chip">Photography</span><span class="chip">Real Estate</span><span class="chip">Education & Coaching</span><span class="chip">Consulting</span><span class="chip">Travel & Tourism</span><span class="chip">Fitness & Wellness</span><span class="chip">Furniture</span><span class="chip">Handmade Products</span><span class="chip">Professional Services</span><span class="chip">Local Shops</span><span class="chip">Startups</span><span class="chip">And More</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">CLIENT FEEDBACK</span>
+          <h2>Built on clear communication <span class="gradient-text">& trust.</span></h2>
+          <p>We look forward to sharing genuine feedback from clients as projects are completed.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="quote-mark">“</div><h3>Client Review</h3><p>Genuine client feedback will be added here after a completed project and with permission.</p><p class="fine" style="margin-top:16px">— Client name to be added</p></article>
+          <article class="card"><div class="quote-mark">“</div><h3>Client Review</h3><p>This space is reserved for verified feedback about the project experience and deliverables.</p><p class="fine" style="margin-top:16px">— Client name to be added</p></article>
+          <article class="card"><div class="quote-mark">“</div><h3>Client Review</h3><p>We will publish real customer feedback here as our portfolio grows.</p><p class="fine" style="margin-top:16px">— Client name to be added</p></article>
+        </div>
+        <p class="testimonial-note">No client counts or results are claimed until they can be verified.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">LET'S GET STARTED</span>
+          <h2>Tell us about your <span class="gradient-text">project.</span></h2>
+          <p>Share a few details. Your enquiry will open in WhatsApp so you can review and send it.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Contact Online Shop Wala</h3>
+            <p class="muted">Have a question about a website or monthly package? Reach out directly.</p>
+            <div class="contact-items">
+              <div class="contact-item"><strong>WHATSAPP / PHONE</strong><a href="https://wa.me/918796621883" target="_blank" rel="noopener">+91 87966 21883 ↗</a></div>
+              <div class="contact-item"><strong>BUSINESS EMAIL</strong><a href="mailto:myconslutentservices768@gmail.com">myconslutentservices768@gmail.com</a></div>
+              <div class="contact-item"><strong>INSTAGRAM</strong><a href="https://www.instagram.com/onlineshopwala_/" target="_blank" rel="noopener">@onlineshopwala_ ↗</a></div>
+            </div>
+            <p class="fine" style="margin-top:18px">Please confirm that the email address is spelled correctly before publishing.</p>
+          </div>
+          <div class="card">
+            <form id="enquiryForm">
+              <div class="form-row">
+                <div><label for="name">Your Name *</label><input id="name" name="name" required placeholder="Full name"></div>
+                <div><label for="business">Business Name</label><input id="business" name="business" placeholder="Your business"></div>
+              </div>
+              <div class="form-row">
+                <div><label for="category">Business Category</label><input id="category" name="category" placeholder="e.g. Retail, candles"></div>
+                <div><label for="service">Service Required *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Basic Business Website</option><option>Instagram Management</option><option>Facebook Management</option><option>LinkedIn Management</option><option>Social Media Boosting</option><option>Custom Project</option></select></div>
+              </div>
+              <div><label for="budget">Approximate Budget</label><select id="budget" name="budget"><option value="">Choose budget (optional)</option><option>₹5,000</option><option>₹5,000–₹10,000</option><option>₹10,000+</option><option>Need guidance</option></select></div>
+              <div><label for="details">Project Details</label><textarea id="details" name="details" placeholder="Tell us what you need..."></textarea></div>
+              <button class="btn" type="submit">Send Enquiry on WhatsApp ↗</button>
+              <p class="fine">This form opens WhatsApp with a prepared message; it does not store submissions on this website.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <a class="brand" href="#home"><span class="brand-mark">OW</span><span>ONLINE SHOP WALA</span></a>
+      <span>Your Business. Your Website. Your Digital Growth.</span>
+      <span>© <span id="year"></span> Online Shop Wala</span>
+    </div>
+  </footer>
+  <a class="whatsapp" href="https://wa.me/918796621883?text=Hi%20Online%20Shop%20Wala%2C%20I%20want%20to%20know%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">✆</a>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('[data-service]').forEach(button => {
+      button.addEventListener('click', () => {
+        document.getElementById('service').value = button.dataset.service;
+      });
+    });
+    document.getElementById('enquiryForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const data = new FormData(this);
+      const message = [
+        'Hi Online Shop Wala! I would like to enquire about your services.',
+        '',
+        'Name: ' + (data.get('name') || ''),
+        'Business: ' + (data.get('business') || 'Not provided'),
+        'Category: ' + (data.get('category') || 'Not provided'),
+        'Service: ' + (data.get('service') || ''),
+        'Budget: ' + (data.get('budget') || 'Not specified'),
+        'Project details: ' + (data.get('details') || 'Not provided')
+      ].join('\n');
+      window.open('https://wa.me/918796621883?text=' + encodeURIComponent(message), '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
